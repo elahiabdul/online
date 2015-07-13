@@ -1,25 +1,42 @@
-## Laravel PHP Framework
+## Online Test Set Up
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+Please find following steps 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+1) Install laravel 4.2  composer create-project laravel/laravel {your_project} 4.2 --prefer-dist (required composer) (place )
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+2) Open app/config/app.php and go cmd promt navigate to project folder and type 'php artisan key:generate' it will generate key in app.php
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+3) Open app/config/database.php  and provide mysql host, DBname, Username and password
 
-## Official Documentation
+4) Once all this extract the give file Online.zip ,  copy view,model,controller  from app 
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
+5) Next step to set up Database, Create Db in Mysql 
 
-### Contributing To Laravel
+6) Once create DB, Open cmd prompt or show and go to our project root folder and type 'php artisan migrate:install', it will create a migration table in our db after the you can start creaeting our own table 
 
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+7) Type 'php artisan migrate:make create_users_table'  Once you type this , it will create a php file in  'app/database/migrations/{ file_start_with_date_and_with_create_users_table.php}', Now you open given online.zip ang go to  'app/database/migrations/{file_start_with_date_and_with_create_users_table.php}' and copy the code and paste it yours  'app/database/migrations/{ file_start_with_date_and_with_create_users_table.php}' once copied open comment prompt and type 'php artisan migrate' it will create the table 
 
-### License
+8) Once table create we need seed the table , php artisan mirgrate:make seed_users_table it will create app/database/migrations/{ file_start_with_date_and_with_seed_users_table_.php} copy and  paste the code from online app/database/migrations/{ file_start_with_date_and_with_seed_users_table_.php}
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+9)Creating table for create_password_reminders_table  Type 'php artisan migrate:make create_password_reminders_table'  Once you type this , it will create a php file in  'app/database/migrations/{ file_start_with_date_and_with_create_password_reminders_table.php}',  copy and  paste the code from online(given code)  'app/database/migrations/{file_start_with_date_and_with_create_password_reminders_table.php}' and copy the code and paste it yours  'app/database/migrations/{ file_start_with_date_and_with_create_password_reminders_table.php}' once copied open comment prompt and type 'php artisan migrate' it will create the table 
+
+
+10)Creating table for create_contacts_table  Type 'php artisan migrate:make create_contacts_table'  Once you type this , it will create a php file in  'app/database/migrations/{ file_start_with_date_and_with_create_contacts_table.php}',  copy and  paste the code from online(given code) 'app/database/migrations/{file_start_with_date_and_with_create_contacts_table.php}' and copy the code and paste it yours  'app/database/migrations/{ file_start_with_date_and_with_create_contacts_table.php}' once copied open comment prompt and type 'php artisan migrate' it will create the table 
+
+
+11) Thats all ,  http://localhost/online/public/login 
+
+ username :: elahiabdul007@gmail.com
+ password :demo
+
+
+
+
+
+
+
+
+
+
+
+
